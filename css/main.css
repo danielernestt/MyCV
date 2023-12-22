@@ -187,7 +187,7 @@ body {
   will-change: transform;
 }
 
-.container {
+.container_main {
   padding-top: 60px;
   margin: 0 auto;
   padding: 0 15px;
@@ -392,6 +392,15 @@ body {
   padding-top: 5px;
 }
 
+.container_main_contast {
+  padding-top: 60px;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+  height: 35px;
+  background-color: rgb(1, 12, 10);
+}
+
 .container_contacts {
   margin: 200px auto;
   text-align: center;
@@ -454,4 +463,13 @@ body {
   color: aliceblue;
   opacity: 0.15;
   font-size: 14px;
+}
+
+.container_main_skills {
+  padding-top: 60px;
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1200px;
+  height: 35px;
+  background-color: rgb(1, 12, 10);
 }/*# sourceMappingURL=main.css.map */
