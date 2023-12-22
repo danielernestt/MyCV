@@ -1,3 +1,7 @@
+
+
+
+
 .main-article {
 	--main-article-transform: translate3d(0, calc(var(--scrollTop) / -7.5), 0);
 	min-height: 100vh;
@@ -30,14 +34,21 @@
 	transition: var(--transition);
 	will-change: transform;
 }
-.copy {
+.copy_main {
 	position: absolute;
 	bottom: calc(var(--index) * 2.5);
 	opacity: .15;
-	font-size: calc(var(--index) * .55);
+	font-size: 14px;
 	letter-spacing: calc(var(--index) / 37.5);
 }
 
+.copy_skills {
+    margin-top: 334px;
+	text-align: center;
+	color: aliceblue;
+	opacity: .15;
+    font-size: 14px;
+}
 .btn {
     display: inline-block;
     height: 48px;
@@ -87,7 +98,7 @@
     top: 1px;
 }
 
-header__wrapper {
+.header__wrapper {
     padding: 0 15px;
     max-width: 660px;
 }
@@ -118,3 +129,4 @@ header__wrapper {
 .header__text p + p{
     margin-top: 0.5em;
 }
+

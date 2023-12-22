@@ -1,44 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-	<title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
 
-	<link rel="stylesheet" href="css/main.css">
+    <script src="libs/gsap/gsap.min.js" defer></script>
+    <script src="libs/gsap/ScrollTrigger.min.js" defer></script>
+    <script src="libs/gsap/ScrollSmoother.min.js" defer></script>
 
-	<script src="libs/gsap/gsap.min.js" defer></script>
-	<script src="libs/gsap/ScrollTrigger.min.js" defer></script>
-	<script src="libs/gsap/ScrollSmoother.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container">
+        <div class="nav-row">
+          <a href="./index.html" class="logo"
+            ><strong>Freelancer</strong> portfolio</a
+          >
 
-	<script src="js/app.js" defer></script>
+          <button class="dark-mode-btn">
+            <a href="https://instagram.com/daniel_ernestt" target="_blank">
+              <img
+                src="./img/instagram.svg"
+                alt="instagram"
+                class="logo_instagram"
+              />
+            </a>
+          </button>
 
-</head>
-<body>
-	<nav class="nav">
-		<div class="container">
-			<div class="nav-row">
-				<a href="./index.html" class="logo"><strong>Freelancer</strong> portfolio</a>
-				
-				<div class="intsgram_nav" target="_blank">
-                    <a href="https://instagram.com/daniel_ernestt" target="_blank"> 
-                    <img src="./img/instagram.svg" alt="instagram" class="instagram">
-				</a> 
-				</div>
-				
-				<ul class="nav-list">
-					<li class="nav-list__item"><a href="./index.html" class="nav-list__link">Projects</a></li>
-					<li class="nav-list__item"><a href="./skills.html" class="nav-list__link">Skills</a></li>
-					<li class="nav-list__item"><a href="./contacts.html" class="nav-list__link">Contacts</a></li>
-				</ul>
-			</div>
-		</div>
-	</nav>
-<body>
-   IN Progress
-   IN Progress
-</body>
+          <ul class="nav-list">
+            <li class="nav-list__item">
+              <a
+                href="./index.html"
+                class="nav-list__link nav-list__link--active"
+                >Projects</a
+              >
+            </li>
+            <li class="nav-list__item">
+              <a href="./skills.html" class="nav-list__link">Skills</a>
+            </li>
+            <li class="nav-list__item">
+              <a href="./contacts.html" class="nav-list__link">Contacts</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="section">
+      <div class="container_contacts">
+        <div id="map"></div>
+
+        <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+        <script>
+          // Инициализация карты
+          var map = L.map("map").setView([51.505, -0.09], 13);
+
+          // Добавление слоя OpenStreetMap
+          L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+            attribution: "© OpenStreetMap contributors",
+          }).addTo(map);
+
+          // Добавление маркера текущей позиции
+          navigator.geolocation.getCurrentPosition(
+            function (position) {
+              var latlng = L.latLng(
+                position.coords.latitude,
+                position.coords.longitude
+              );
+              L.marker(latlng).addTo(map).bindPopup("Вы здесь!");
+              map.setView(latlng, 13);
+            },
+            function (error) {
+              console.error(
+                "Ошибка получения местоположения: " + error.message
+              );
+            }
+          );
+        </script>
+
+        <h1 class="title-1">Contacts</h1>
+
+        <ul class="content-list">
+          <li class="content-list__item">
+            <h2 class="title-2">Location</h2>
+            <p class="p_contacts">Riga, Latvia</p>
+          </li>
+          <li class="content-list__item">
+            <h2 class="title-2">Telegram / WhatsApp</h2>
+            <p><a href="tel:+371 24004000">+371 24004000</a></p>
+          </li>
+
+          <li class="content-list__item">
+            <h2 class="title-2">Email</h2>
+            <p><a href="hit95@inbox.lv">hit95@inbox.lv</a></p>
+          
+		</li>
+        </ul>
+		<div class="copy_footer">© WebDesign Daniel Ernestt</div>
+      </div>
+    </main>
+  </body>
 </html>

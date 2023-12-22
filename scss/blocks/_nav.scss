@@ -1,0 +1,73 @@
+
+
+.nav-row {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    column-gap: 30px;
+    row-gap: 20px;
+    flex-wrap: wrap;
+}
+
+.logo {
+    margin-right: auto;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.logo strong {
+    font-weight: 700;
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    align-items: center;
+    column-gap: 40px;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-list__link {
+    color: rgb(255, 255, 255);
+}
+
+.nav-list__link:hover {
+    color: rgb(71 173 160);
+    transition: color 0.3s ease-in;
+}
+
+.nav-list__link--active {
+    position: relative;
+}
+
+
+
+.logo_instagram {
+    
+
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    width: 51px;
+    height: 30px;
+    padding: 5px;
+    
+}
+.logo_instagram:hover {
+    color: rgb(71 173 160);
+    transition: color 0.3s ease-in; // NE PONJTANO
+}
+
+.logo_instagram:active {
+    position: relative;
+    top: 2px;
+}
+
+.nav{
+   padding-top: 5px;
+}

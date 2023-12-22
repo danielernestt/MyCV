@@ -98,12 +98,6 @@ body {
   line-height: 1.55;
 }
 
-html, body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 .wrapper {
   margin-top: 45px;
 }
@@ -194,81 +188,13 @@ html, body {
 }
 
 .container {
+  padding-top: 60px;
   margin: 0 auto;
   padding: 0 15px;
   max-width: 1200px;
-}
-
-/* Nav */
-.nav {
-  padding: 5px 0;
-  color: white;
-  letter-spacing: normal;
+  height: 35px;
+  background-color: rgb(1, 12, 10);
   transform: translate3d(0, calc(var(--scrollTop)), 0);
-}
-
-.nav-row {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-  row-gap: 20px;
-  flex-wrap: wrap;
-}
-
-.instagram {
-  position: relative;
-  display: flex;
-  justify-content: space-between;
-  width: 22px;
-}
-
-.logo {
-  margin-right: auto;
-  color: white;
-  font-size: 24px;
-  font-family: "Poppins", sans-serif;
-  transform: translate3d(0, calc(var(--scrollTop) / 9.7), 0);
-}
-
-.logo strong {
-  font-weight: 700;
-}
-
-.nav-list {
-  display: flex;
-  flex-wrap: wrap;
-  row-gap: 15px;
-  align-items: center;
-  -moz-column-gap: 50px;
-       column-gap: 50px;
-  font-size: 16px;
-  font-weight: 500;
-  font-family: "Poppins", sans-serif;
-}
-
-.nav-list__link {
-  color: white;
-}
-
-.nav-list__link:hover {
-  color: #47ada0;
-}
-
-.nav-list__link--active {
-  position: relative;
-}
-
-.nav-list__link--active::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 100%;
-  display: block;
-  height: 2px;
-  width: 100%;
-  background-color: var(--accent);
 }
 
 .main-article {
@@ -304,12 +230,20 @@ html, body {
   will-change: transform;
 }
 
-.copy {
+.copy_main {
   position: absolute;
   bottom: calc(var(--index) * 2.5);
   opacity: 0.15;
-  font-size: calc(var(--index) * 0.55);
+  font-size: 14px;
   letter-spacing: calc(var(--index) / 37.5);
+}
+
+.copy_skills {
+  margin-top: 334px;
+  text-align: center;
+  color: aliceblue;
+  opacity: 0.15;
+  font-size: 14px;
 }
 
 .btn {
@@ -357,7 +291,7 @@ html, body {
   top: 1px;
 }
 
-header__wrapper {
+.header__wrapper {
   padding: 0 15px;
   max-width: 660px;
 }
@@ -387,4 +321,137 @@ header__wrapper {
 
 .header__text p + p {
   margin-top: 0.5em;
+}
+
+.nav-row {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+  row-gap: 20px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  margin-right: auto;
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+}
+
+.logo strong {
+  font-weight: 700;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+  align-items: center;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.nav-list__link {
+  color: rgb(255, 255, 255);
+}
+
+.nav-list__link:hover {
+  color: rgb(71, 173, 160);
+  transition: color 0.3s ease-in;
+}
+
+.nav-list__link--active {
+  position: relative;
+}
+
+.logo_instagram {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  width: 51px;
+  height: 30px;
+  padding: 5px;
+}
+
+.logo_instagram:hover {
+  color: rgb(71, 173, 160);
+  transition: color 0.3s ease-in;
+}
+
+.logo_instagram:active {
+  position: relative;
+  top: 2px;
+}
+
+.nav {
+  padding-top: 5px;
+}
+
+.container_contacts {
+  margin: 200px auto;
+  text-align: center;
+  max-width: 1200px;
+  height: 650px;
+}
+
+.content-list {
+  margin: 0 auto;
+  max-width: 570px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 40px;
+  text-align: center;
+}
+
+.content-list a {
+  color: whitesmoke;
+}
+
+.content-list__item {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.content-list__item p + p {
+  margin-top: 0.5em;
+}
+
+#map {
+  max-width: 1230px;
+  height: 200px;
+}
+
+.title-1 {
+  padding-top: 30px;
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 1.4;
+  color: rgb(71, 173, 160);
+  text-align: center;
+}
+
+.title-2 {
+  color: whitesmoke;
+  padding-top: 10px;
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.p_contacts {
+  color: whitesmoke;
+}
+
+.copy_footer {
+  margin-top: 15px;
+  text-align: center;
+  color: aliceblue;
+  opacity: 0.15;
+  font-size: 14px;
 }/*# sourceMappingURL=main.css.map */
