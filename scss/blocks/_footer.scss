@@ -35,6 +35,7 @@
 	will-change: transform;
 }
 .copy_main {
+    text-align: center;
 	position: absolute;
 	bottom: calc(var(--index) * 2.5);
 	opacity: .15;
@@ -42,8 +43,9 @@
 	letter-spacing: calc(var(--index) / 37.5);
 }
 
+
 .copy_skills {
-    margin-top: 334px;
+    margin-top: 45vh;
 	text-align: center;
 	color: aliceblue;
 	opacity: .15;
