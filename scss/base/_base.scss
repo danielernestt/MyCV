@@ -1,14 +1,26 @@
 :root {
-	--index: calc(1vw + 1vh);
+	--index: calc(1.5vw + 1.5vh);
 	--text: #e7e7e0;
 	--transition: transform .75s cubic-bezier(.075, .5, 0, 1);
 }
 
 
 body {
-	background-color: rgb(1 12 10);
+	background-color: rgba(1, 12, 10,);
 	font-family: $font-title;
 	line-height: 1.55;
 }
 
+.container{
+	max-width: 1400px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin: 0 auto;
+
+}
+
+.none{
+	display: none !important;
+
+}
 

@@ -1,8 +1,5 @@
 
-.wrapper{
 
-	margin-top: 45px;
-}
 .main-header {
 	position: relative;
 }
@@ -27,7 +24,7 @@
 	transition: var(--transition);
 }
 .layers__1 {
-	transform: translate3d(0, calc(var(--scrollTop) / 1.5), 0);
+	transform: translate3d(0, calc(var(--scrollTop) / 3.0), 0);
 	z-index: 0;
 }
 .layers__2 {
@@ -62,7 +59,7 @@
 	
 }
 .layers__title {
-	
+	color: #053129;
 	margin-top: -160px;
 	font-size: calc(var(--index) * 1.0);
 	letter-spacing: calc(var(--index) / 2.25);
