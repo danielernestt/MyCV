@@ -399,6 +399,7 @@ body {
 
 .header-wrapper {
   position: fixed;
+  top: 0;
   width: 100%;
   z-index: 998;
 }
@@ -546,7 +547,7 @@ body {
 .mobile-nav {
   display: none;
   position: fixed;
-  z-index: 99;
+  z-index: 999;
   top: 0;
   left: 0;
   width: 100%;
