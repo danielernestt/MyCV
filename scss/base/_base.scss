@@ -3,6 +3,11 @@
 	--text: #e7e7e0;
 	--transition: transform .75s cubic-bezier(.075, .5, 0, 1);
 }
+@media (max-width: 500px) {
+	:root {
+		--index: calc(2.5vw + 2.5vh);
+	}
+}
 
 
 body {

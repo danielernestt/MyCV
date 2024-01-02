@@ -93,6 +93,11 @@ legend {
   --transition: transform .75s cubic-bezier(.075, .5, 0, 1);
 }
 
+@media (max-width: 500px) {
+  :root {
+    --index: calc(2.5vw + 2.5vh);
+  }
+}
 body {
   background-color: rgb(1, 12, 10);
   font-family: "Roboto", sans-serif;
